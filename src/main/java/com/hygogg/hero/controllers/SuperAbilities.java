@@ -26,7 +26,7 @@ public class SuperAbilities {
             return "index";
         } else {
             this.superAbilityService.create(ability);
-            return "redirect:/";
+            return "redirect:/main";
         }
     }
 	

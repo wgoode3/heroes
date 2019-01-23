@@ -26,7 +26,7 @@ public class Heroes {
 		this.superAbilityService = superAbilityService;
 	}
 
-	@RequestMapping("/")
+	@RequestMapping("/main")
 	public String index(Model model) {
 		model.addAttribute("heroes", this.heroService.assembleHeroes());
 		model.addAttribute("abilities", this.superAbilityService.getAll());
@@ -41,7 +41,7 @@ public class Heroes {
             return "index";
         } else {
             heroService.heroOrigin(hero);
-            return "redirect:/";
+            return "redirect:/main";
         }
     }
 	
@@ -50,7 +50,7 @@ public class Heroes {
         Hero h = this.heroService.getById(hero_id);
         SuperAbility s = this.superAbilityService.getById(ability_id);
         this.heroService.addAbilityToHero(h, s);
-		return "redirect:/";
+		return "redirect:/main";
     }
 	
 }

@@ -27,7 +27,7 @@ public class Nicknames {
 		Hero h = this.heroService.getById(hero_id);
 		nick.setHero(h);
 		this.nicknameService.assignNickname(nick);
-		return "redirect:/";
+		return "redirect:/main";
     }
 	
 }

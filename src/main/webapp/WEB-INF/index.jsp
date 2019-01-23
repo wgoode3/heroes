@@ -1,12 +1,12 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<title>Hello World</title>
+	<title>Heroes</title>
 	<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 	<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%> 
 </head>
 <body>
-	<h1>Hello World</h1>
+	<h1>Heroes</h1>
 	
 	<table border="1">
         <tr>
@@ -53,6 +53,8 @@
 	
 	<hr>
 	
+	<h2>Abilities</h2>
+	
 	<table border="1">
         <tr>
             <th>Name</th>
@@ -80,6 +82,8 @@
 	   
 	<hr>
 	
+	<h2>Add an ability</h2>
+	
 	<form action="/assignAbility" method="post">
 		<p>
 			Hero:
@@ -99,6 +103,10 @@
 		</p>
 		<input type="submit" value="Submit"/>
 	</form>
+	
+	<hr>
+	
+	<h2>Add a nickname</h2>
 	
 	<form action="/assignNickname" method="post">
 		<p>
