@@ -8,6 +8,8 @@
 <body>
 	<h1>Heroes</h1>
 	
+	<a href="/logout">Logout</a>
+	
 	<table border="1">
         <tr>
             <th>Alias</th>

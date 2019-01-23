@@ -16,9 +16,14 @@ public class UserService {
 		this.userRepository = userRepository;
 	}
 
-	public void createUser(Map<String, String> body) {
+	public User createUser(Map<String, String> body) {
 		User user = new User(body);
 		this.userRepository.save(user);
+		return user;
+	}
+	
+	public User findByEmail(String email) {
+		return this.userRepository.findByEmail(email);
 	}
 	
 }
